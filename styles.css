@@ -273,3 +273,18 @@ nav.nav-mobile-open .nav-links li a{padding:12px 16px;font-size:.9rem}
   .nav-toggle{display:flex}
   .nav-links{display:none}
 }
+
+/* sponsors */
+.spons-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.spons-inner img {
+  max-width: 150px;   /* adjust size as needed */
+  height: auto;
+  object-fit: contain;
+}
