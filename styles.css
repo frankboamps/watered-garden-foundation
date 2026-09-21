@@ -288,3 +288,12 @@ nav.nav-mobile-open .nav-links li a{padding:12px 16px;font-size:.9rem}
   height: auto;
   object-fit: contain;
 }
+.sponsors {
+  background: rgb(60, 71, 43);
+  padding: 60px 6%;
+}.sponsors h3 {
+  color: white;
+}.sponsors h3 em {
+
+  color: rgb(106, 112, 13);
+}
