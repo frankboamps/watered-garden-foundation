@@ -161,6 +161,7 @@
     .miss-item p{font-size:.93rem;color:var(--muted);line-height:1.78}
     .about-story-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
     .about-story-inner img{width:100%;height:clamp(300px,38vw,480px);object-fit:cover;object-position:50% 20%;display:block;border-radius:2px}
+    .stitle{font-family:'Libre Baskerville',serif;font-size:1.6rem;color:rgb(95, 120, 57);margin-bottom:12px}
 
     /* PROJECTS */
     .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -312,10 +313,22 @@ nav.nav-mobile-open .nav-links li a{padding:12px 16px;font-size:.9rem}
   .spons-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media(max-width:640px) {
-  .spons-columns { grid-template-columns: 1fr; }
+  .spons-columns{ grid-template-columns: 1fr; }
 }
 .sponsors h3 {
   font-family: 'Libre Baskerville', serif;
   color: white;
   margin-bottom: 5px;
+}
+.services{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 6%;
+  gap: 20px;
+}
+@media(max-width:900px) {
+  .services { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width:640px) {
+  .services { grid-template-columns: 1fr; }
 }
