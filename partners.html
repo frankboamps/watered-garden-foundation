@@ -124,7 +124,7 @@
             const result = await response.json();
             if (!response.ok || !result.success) throw new Error();
             form.reset();
-            status.textContent = 'Thank you. Your partnership request has been sent successfully.';
+            status.textContent = 'Thank you. Your partnership request has been sent successfully. We will follow up asap and get in touch.'; 
             status.className = 'form-status is-success';
         } catch {
             status.textContent = 'Sorry, we could not send your request. Please try again.';
