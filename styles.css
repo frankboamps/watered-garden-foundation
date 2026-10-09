@@ -164,13 +164,17 @@
     .stitle{font-family:'Libre Baskerville',serif;font-size:1.6rem;color:rgb(95, 120, 57);margin-bottom:12px}
 
     /* PROJECTS */
-    .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .proj-card{background:white;border:1px solid var(--border);cursor:pointer;transition:all .28s}
+    .proj-grid{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px 4px 18px;scrollbar-width:thin;scrollbar-color:rgba(30,92,56,.45) rgba(237,244,240,.7)}
+    .proj-grid::-webkit-scrollbar{height:8px}
+    .proj-grid::-webkit-scrollbar-thumb{background:rgba(30,92,56,.45);border-radius:999px}
+    .proj-grid::-webkit-scrollbar-track{background:rgba(237,244,240,.7);border-radius:999px}
+    .proj-card{background:white;border:1px solid var(--border);cursor:pointer;transition:all .28s;display:flex;flex-direction:column;min-width:280px;max-width:360px;flex:0 0 300px;scroll-snap-align:start;min-height:100%}
     .proj-card:hover{border-color:var(--green);box-shadow:0 8px 40px rgba(30,92,56,.1);transform:translateY(-3px)}
     .proj-card img{width:100%;aspect-ratio:16/9;max-height:280px;object-fit:cover;object-position:50% 20%;display:block}
-    .proj-body{padding:28px}
+    .proj-body{padding:28px;display:flex;flex-direction:column;flex:1}
     .proj-body h3{font-family:'Libre Baskerville',serif;font-size:1.12rem;color:var(--dark);margin-bottom:10px}
-    .proj-body p{font-size:.9rem;color:var(--muted);line-height:1.72;margin-bottom:22px}
+    .proj-body p{font-size:.9rem;color:var(--muted);line-height:1.72;margin-bottom:22px;flex:1}
+    .proj-body .btn{margin-top:auto;align-self:flex-start}
     .breadcrumb{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--border)}
     .breadcrumb a{color:var(--green);cursor:pointer;text-decoration:none;font-weight:500}
     .breadcrumb a:hover{text-decoration:underline}
@@ -234,7 +238,7 @@
     @media(max-width:900px){
       .who-inner,.about-intro-inner,.about-story-inner,.vol-inner,.testi-inner,.contact-inner{grid-template-columns:1fr;gap:44px}
       .values-grid,.mission-grid{grid-template-columns:1fr}
-      .proj-grid,.causes-grid{grid-template-columns:1fr 1fr}
+      .proj-card{flex-basis:300px}
       .donate-banner{grid-template-columns:1fr}
       .gal-cta{grid-template-columns:1fr}
       .stats-inner{flex-wrap:wrap}
@@ -244,7 +248,7 @@
     }
     @media(max-width:640px){
       .nav-links{display:none}
-      .proj-grid,.causes-grid{grid-template-columns:1fr}
+      .proj-card{flex-basis:86vw;min-width:86vw;max-width:none}
       .gal-grid{grid-template-columns:1fr 1fr}
       .gal-grid .s2{grid-column:span 1;}
       .footer-top{grid-template-columns:1fr;gap:36px}
